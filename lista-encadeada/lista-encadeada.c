@@ -56,18 +56,23 @@ void deletarNo(no **lista, int valor){
 
 void printList (no *lista) {
     no *aux = lista;
+    printf("COMEÇO | ");
     while(aux != NULL){
         printf("%d -> ", aux->idade);
         aux = aux->prox; 
     }
-    printf("NULL\n");
+    printf("NULL");
+    printf(" | FINAL\n");
 }
 
 int main() {
     no *lista = NULL;
-    inserirFinal(&lista, 55);
+    inserirFinal(&lista, 10);
+    inserirInicio(&lista, 20);
+    inserirFinal(&lista, 30);
+    inserirInicio(&lista, 40);
+    inserirFinal(&lista, 50);
 
-    
     printList(lista);
 
     return 0;
